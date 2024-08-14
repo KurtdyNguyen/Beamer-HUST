@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+
+\begin{document}
+\begin{frame}{Một số ngành Tâm lý học tiêu biểu}
+	\centering
+	\begin{tikzpicture}[
+		node distance = 1cm and 1cm	
+	]
+		\node (tamlyhoc) [node_thuong] {Một số ngành Tâm lý học};
+		\node (cnvtc) [node_thuong, below = of tamlyhoc] {Công nghiệp và Tổ chức};
+		\node (kt) [node_thuong, left = of cnvtc] {Kỹ thuật};
+		\node (kd) [node_thuong, right = of cnvtc] {Kinh doanh};
+		
+		\draw (tamlyhoc) -- (cnvtc);
+		\draw (tamlyhoc) -- (kt);
+		\draw (tamlyhoc) -- (kd);
+	\end{tikzpicture}
+\end{frame}
+\subsection{Nhắc lại lý thuyết}
+\begin{frame}{Nhắc lại lý thuyết - Tâm lý người theo quan điểm chủ nghĩa Duy vật biện chứng}
+    \begin{enumerate}
+        \item Tâm lý người là sản phẩm phản ánh hiện thực khách quan bằng hoạt động của mỗi người
+        \item Tâm lý là chức năng của não
+        \item Tâm lý là kinh nghiệm xã hội lịch sử của loài người biển thành cái riêng của từng người
+    \end{enumerate}
+    \begin{alertblock}{Kết luận}
+        Ba luận điểm trên giúp cho chúng ta hiểu một cách khoa học về bản chất hiện tượng tâm lý người - Đó là hiện tượng tinh thần do hiện thực khách quan tác động vào giác quan và não một con người cụ thể gây ra, có tính xã hội - lịch sử, tính giai cấp, tính dân tộc, mang màu sắc riêng của bản thân mỗi người.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Nhắc lại lý thuyết - Phân loại các hiện tượng tâm lý}
+    \begin{tikzpicture}[scale=0.7]
+        \path[mindmap, concept color = red!90, text = white, minimum size=2cm]
+        node[concept]{Hiện tượng tâm lý}
+        [clockwise from=-30]
+        child[concept color = red!90!red!60]{
+            node[concept]{Quá trình tâm lý}
+            [clockwise from=30]
+            child[concept color = red!60!red!30]{node[concept]{Cảm tính}}
+            child[concept color = red!60!red!30]{node[concept]{Trung gian}}
+            child[concept color = red!60!red!30]{node[concept]{Lý tính}}
+        }
+        child[concept color = red!90!red!60]{
+            node[concept]{Trạng thái tâm lý}
+        }
+        child[concept color = red!90!red!60]{
+            node[concept]{Thuộc tính tâm lý}
+            [clockwise from=-90]
+            child[concept color = red!60!red!30]{node[concept]{Xu hướng}}
+            child[concept color = red!60!red!30]{node[concept]{Tính cách}}
+            child[concept color = red!60!red!30]{node[concept]{Khí chất}}
+            child[concept color = red!60!red!30]{node[concept]{Năng lực}}
+        };
+    \end{tikzpicture}
+    
+\end{frame}
+
+\end{document}

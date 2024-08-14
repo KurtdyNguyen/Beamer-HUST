@@ -1,0 +1,139 @@
+\documentclass[presentation]{beamer}
+
+\usetheme{Madrid}
+\definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
+\definecolor{fluorescentorange}{rgb}{1.0, 0.75, 0.0}
+\definecolor{bittersweet}{rgb}{1.0, 0.44, 0.37}
+\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+\definecolor{blizzardblue}{rgb}{0.67, 0.9, 0.93}
+\setbeamercolor{palette primary}{use=structure, bg = bostonuniversityred}
+\setbeamercolor{palette secondary}{fg = black, bg = fluorescentorange}
+\setbeamercolor{palette tertiary}{bg = bostonuniversityred}
+\setbeamercolor{structure}{fg = bostonuniversityred}
+
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, mindmap}
+\graphicspath{{anh/}}
+
+\tikzstyle{node_thuong} = [rectangle, rounded corners, text centered, draw=black, , text width = 3cm]
+
+\setlength{\fboxsep}{3mm}
+\newcommand{\dung}[1]{\colorbox{brightgreen}{
+	\begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+		#1
+	\end{minipage}
+}}
+\newcommand{\sai}[1]{\colorbox{bittersweet}{
+	\begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+		#1
+	\end{minipage}
+}}
+\newcommand{\chuabiet}[1]{\colorbox{blizzardblue}{
+	\begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+		#1
+	\end{minipage}
+}}
+\newcommand{\dungbox}[1]{\alt<2>
+	{\dung{#1}}
+	{\chuabiet{#1}}
+}
+\newcommand{\saibox}[1]{\alt<2>
+	{\sai{#1}}
+	{\chuabiet{#1}}
+}
+
+\usepackage{subfiles}
+
+\begin{document}
+\title{Tìm hiểu về những ngành Tâm lý học}
+\author{Nhóm 6}
+\institute{Đại học Bách Khoa Hà Nội}
+\date{}
+
+\begin{frame}
+	\vspace*{-15.5mm}
+	\begin{figure}[H]
+		\hspace*{-4.7mm}
+		\includegraphics[width = \paperwidth]{logo_cngd}
+	\end{figure}
+	\vspace{-5mm}
+	\maketitle
+	\vspace{-10mm}
+	\centering
+	\begin{tabular}{ll}
+		Giảng viên: & Ts. Nguyễn Thị Duyên\\
+		Học phần: & ED3280 - Tâm lý học ứng dụng
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Giới thiệu thành viên}
+	\begin{tabular}{ll@{\hskip 1cm}ll}
+		Trương Quang Bình & 20200068 & Nguyễn Đức Mạnh & 20235525\\[5mm]
+		Lê Đức Dũng & 20214952 & Bùi Quang Mạnh & 20227637\\[5mm]
+		Lưu Văn Dương & 20234131 & Nguyễn Lê Minh & 20205002\\[5mm]
+		Đỗ Văn Hùng & 20206283 & Trần Quốc Nam Phi & 20200459\\[5mm]
+		Chu Thành Lâm & 20224034 & Nguyễn Ngọc Quý & 20212942\\[5mm]
+		Nông Hoàng Ngọc Mai & 20201894 & Đỗ Tú & 20194199
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Mục lục}
+    \begin{columns}[t]
+        \begin{column}{0.5\textwidth}
+            \tableofcontents[sections={1-3}]
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \tableofcontents[sections={4-}]
+        \end{column}
+    \end{columns}
+	
+\end{frame}
+
+\section{Giới thiệu}
+\subfile{sections/gioi_thieu}
+
+\section{Tâm lý học Kỹ thuật}
+\subfile{sections/tlh_kt/tlh_kt_kn}
+\subfile{sections/tlh_kt/tlh_kt_dtnk}
+\subfile{sections/tlh_kt/tlh_kt_ppnk}
+\subfile{sections/tlh_kt/tlh_kt_udtt}
+
+\section{Tâm lý học Công nghiệp và Tổ chức}
+\subfile{sections/tlh_cntc/tlh_cntc_kn}
+\subfile{sections/tlh_cntc/tlh_cntc_dtnc}
+\subfile{sections/tlh_cntc/tlh_cntc_ppnc}
+\subfile{sections/tlh_cntc/tlh_cntc_udtt}
+
+\section{Tâm lý học Kinh doanh}
+\subfile{sections/tlh_kd/tlh_kd_kn}
+\subfile{sections/tlh_kd/tlh_kd_dtnk}
+\subfile{sections/tlh_kd/tlh_kd_ppnk}
+
+\section{Kết luận}
+\subfile{sections/ket_luan}
+\section{Trắc nghiệm}
+\subfile{sections/trac_nghiem}
+
+\begin{frame}{Lời cảm ơn}
+	\begin{minipage}{0.45\textwidth}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth]{logo_hust}
+		\end{figure}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\textwidth}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{logo_nhom}
+		\end{figure}
+	\end{minipage}
+	\begin{center}
+		\LARGE Cảm ơn cô và các bạn đã theo dõi!
+	\end{center}
+	\begin{block}
+		\Large \textit{Chúc cô dồi dào sức khỏe. Chúc các bạn không phải gặp lại cô ở môn này lần sau.}
+	\end{block}
+\end{frame}
+\end{document}

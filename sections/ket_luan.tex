@@ -1,0 +1,31 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+\begin{frame}{Kết luận}
+	\vspace{-5mm}
+	\begin{alertblock}{Kết luận về Tâm lý học}
+		\Large Tâm lý học giúp chúng ta tìm hiểu và cải thiện các khía cạnh khác nhau của cuộc sống và công việc.
+	\end{alertblock}
+	\vspace{5mm}
+	\centering
+	\begin{tikzpicture}[
+		node distance = 1cm and 1cm,
+		every path/.style = {thick}
+	]
+	\onslide<1->{
+		\node (cnvtc) [node_thuong] {Công nghiệp và Tổ chức};
+		\node (kt) [node_thuong, left = of cnvtc] {Kỹ thuật};
+		\node (kd) [node_thuong, right = of cnvtc] {Kinh doanh};
+	}
+	\onslide<2>{	
+		\node (kl_cnvtc) [node_thuong, below = of cnvtc] {Nâng cao hiệu suất và môi trường làm việc};
+		\node (kl_kt) [node_thuong, left = of kl_cnvtc]	{Tối ưu hóa giao diện, trải nghiệm người dùng};
+		\node (kl_kd) [node_thuong, right = of kl_cnvtc] {Phân tích hành vi để đưa ra quyết định chiến lược kinh doanh};
+		
+		\draw [line width=1pt, double distance=3pt, arrows = {-Latex[length=0pt 3 0]}] (cnvtc) -- (kl_cnvtc);
+		\draw [line width=1pt, double distance=3pt, arrows = {-Latex[length=0pt 3 0]}] (kt) -- (kl_kt);
+		\draw [line width=1pt, double distance=3pt, arrows = {-Latex[length=0pt 3 0]}] (kd) -- (kl_kd);
+	}
+	\end{tikzpicture}
+\end{frame}
+\end{document}
